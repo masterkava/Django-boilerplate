@@ -1,0 +1,55 @@
+>>> python manage.py collectstatic
+
+
+
+### you can create multiple settings.py files, 
+one for local dev aka localhost one when you go Live.
+###why needed?
+it might go very much longer so better to split
+## it's called creating multiple modules
+ 
+###the takeaway from here is 
+just change the dev.py to prod.py inside the manage.py
+and all the work is done
+
+
+
+###python decouple
+a lib that allows us to secure the reference secret keys 
+and secret var don't want to public and incase the website
+is hacked someway and the files are avail to this hacker
+they still wouldn't be able to see what this variables
+actually are. because python decouple will be referencing
+them from the file they don't have access to.
+>>>pip install python-decouple
+
+
+
+>>>pip freeze > requirements.txt
+
+
+
+###creating .env file
+we can store all the api keys and other vars here
+
+
+##one of the good thing is when we deploy using heroku
+we can set up the env variables
+hosting on digital ocean we need .env file still
+
+
+
+###custom django commands for renaming project
+we are gonna kill two birds with one stone
+
+
+
+>>>python manage.py help
+
+>>>python manage.py rename my_project
+base.py, wsgi.py, manage.py 
+
+
+
+
+
